@@ -10,9 +10,11 @@
 # 9. return clean data and if it's valid
 
 def validation(name,employee_id):
+
     if not isinstance(name,str):
         raise TypeError("Name must be a string")
     name=name.strip().title()
+    
 
     if not name:
         raise ValueError("Name cannot be blank")
