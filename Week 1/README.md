@@ -17,7 +17,7 @@ The week also includes a Django todo CRUD application as practical work with mod
 - Document setup instructions, test results, and remaining gaps.
 
 
-## Day 1 — Environment and Repository
+## Day 1 - Environment and Repository
 
 **Objective:** Understand the development environment and create a reproducible project setup.
 
@@ -33,7 +33,7 @@ The week also includes a Django todo CRUD application as practical work with mod
 
 A repository with clear setup instructions that another developer can follow from a fresh terminal.
 
-## Day 2 — Python Values and Validation
+## Day 2 - Python Values and Validation
 
 **Objective:** Learn to validate values before accepting them into an application.
 
@@ -50,7 +50,7 @@ A repository with clear setup instructions that another developer can follow fro
 
 A validation module with clear rules and sample outputs demonstrating both accepted and rejected inputs.
 
-## Day 3 — Functions and Modules
+## Day 3 - Functions and Modules
 
 **Objective:** Separate business logic from user interaction and make functions reusable.
 
@@ -66,7 +66,7 @@ A validation module with clear rules and sample outputs demonstrating both accep
 
 A reusable service module and a command-line caller that demonstrate inputs, outputs, and error handling.
 
-## Day 4 — Types, Configuration, and Git
+## Day 4 - Types, Configuration, and Git
 
 **Objective:** Practise type hints, environment settings, secrets management, and reviewable Git changes.
 
@@ -83,7 +83,7 @@ A reusable service module and a command-line caller that demonstrate inputs, out
 
 A typed service, configuration example, and evidence of Git branch and diff practice.
 
-## Day 5 — Foundation Review
+## Day 5 - Foundation Review
 
 **Objective:** Demonstrate the week's foundational skills independently.
 
@@ -100,7 +100,7 @@ A typed service, configuration example, and evidence of Git branch and diff prac
 
 A runnable program, a corrected README, demonstrated boundary behavior, and a list of known limitations.
 
-## Additional Practice — Django Todo CRUD Application
+## Additional Practice - Django Todo CRUD Application
 
 This project provides additional practice with Django's Model–View–Template workflow.
 
