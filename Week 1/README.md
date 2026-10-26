@@ -1,4 +1,4 @@
-# Week 1 — Python and Project Foundation
+# Week 1 - Python and Project Foundation
 
 ## Overview
 
