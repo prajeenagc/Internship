@@ -14,6 +14,7 @@ cffi==2.1.1
 charset-normalizer==3.5.2
 click==8.5.0
 colorama==0.4.6
+cross-web==0.7.0
 detect-installer==0.2.1
 Django==6.1.2
 djangorestframework==3.18.3
@@ -54,6 +55,8 @@ pluggy==1.6.0
 protobuf==7.36.2
 psycopg==3.3.6
 psycopg-binary==3.3.6
+psycopg2==2.9.13
+psycopg2-binary==2.9.13
 pwdlib==0.3.1
 pycparser==3.11
 pydantic==2.14.1
@@ -64,6 +67,7 @@ Pygments==2.21.0
 PyJWT==2.15.1
 pypika-tortoise==0.6.5
 pytest==9.1.1
+python-dateutil==3.0.0
 python-dotenv==1.2.4
 python-multipart==0.0.32
 PyYAML==6.0.3
@@ -74,9 +78,11 @@ rignore==0.8.1
 ruff==0.17.0
 sentry-sdk==2.73.0
 shellingham==1.5.4
+six==1.17.0
 SQLAlchemy==2.1.4
 sqlparse==0.6.0
 starlette==1.7.0
+strawberry-graphql==0.338.0
 tortoise-orm==1.1.9
 typer==0.27.3
 typing-inspection==0.4.4

@@ -65,8 +65,8 @@ async def update_todo(
     todo_query=session.query(Todo).filter(Todo.id==id)
     todo=todo_query.first()
     if new_text:
-        todo.text=new_text
-    todo.is_done=is_complete
+        todo.text=new_text # type: ignore
+    todo.is_done=is_complete# type: ignore
     session.add(todo)
     session.commit
 
@@ -76,4 +76,4 @@ async def delete_todo(id:int):
     todo=todo_query.filter(Todo.id==id).first()
     session.delete(todo)
     session.commit()
-    return{"Todo Deleted":todo.text}
+    return{"Todo Deleted":todo.text}# type: ignore
