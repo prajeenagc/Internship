@@ -9,7 +9,7 @@ from sqlalchemy.orm import declarative_base
 url=URL.create(
     drivername="postgresql",
     username="postgres",
-    password="19972002jjk",
+    password="",
     host="localhost",
     database="mydb",
     port=5432
