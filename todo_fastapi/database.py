@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import sessionmaker
+from decouple import config
 
 
 load_dotenv()
@@ -15,8 +16,8 @@ load_dotenv()
 #     port=5432
 # )
 
-url=os.getenv("POSTGRES_DB_URL")
+url=config("POSTGRES_DB_URL")
 
-engine=create_engine(url)
+engine=create_engine(url) # type: ignore
 Session=sessionmaker(bind=engine)
 session=Session()
