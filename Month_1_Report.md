@@ -202,6 +202,6 @@ During the first month of the internship, I gained practical experience with Pyt
 
 ---
 
-**Prepared by:** Prajeena G.C.
+**Prepared by:** Prajeena G.C.  
 **Organization:** Codavatar  
 **Supervisor review:** ______________________________
