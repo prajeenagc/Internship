@@ -1,0 +1,102 @@
+
+# ENUMS
+
+enum TaskStatus {
+    TODO
+    IN_PROGRESS
+    COMPLETED
+}
+
+# OBJECT TYPES
+
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    projects(limit: Int = 10): [Project!]!
+}
+
+type Project {
+    id: ID!
+    name: String!
+    description: String
+    owner: User!
+    tasks(limit: Int = 10): [Task!]!
+}
+
+type Task {
+    id: ID!
+    title: String!
+    description: String
+    status: TaskStatus!
+    project: Project!
+    assignedTo: User
+}
+
+# INPUT TYPES
+
+input CreateUserInput {
+    username: String!
+    email: String!
+}
+
+input CreateProjectInput {
+    name: String!
+    description: String
+}
+
+input UpdateProjectInput {
+    name: String
+    description: String
+}
+
+input CreateTaskInput {
+    title: String!
+    description: String
+    projectId: ID!
+    assignedToId: ID
+}
+
+input UpdateTaskInput {
+    title: String
+    description: String
+    status: TaskStatus
+    assignedToId: ID
+}
+
+# QUERIES
+
+type Query {
+    user(id: ID!): User
+    users(limit: Int = 10): [User!]!
+
+    project(id: ID!): Project
+    projects(limit: Int = 10): [Project!]!
+
+    task(id: ID!): Task
+    tasks(limit: Int = 10): [Task!]!
+}
+
+# MUTATIONS
+
+type Mutation {
+    createUser(input: CreateUserInput!): User!
+
+    createProject(input: CreateProjectInput!): Project!
+
+    updateProject(
+        id: ID!
+        input: UpdateProjectInput!
+    ): Project
+
+    createTask(input: CreateTaskInput!): Task!
+
+    updateTask(
+        id: ID!
+        input: UpdateTaskInput!
+    ): Task
+
+    deleteTask(id: ID!): Boolean!
+
+    deleteProject(id: ID!): Boolean!
+}

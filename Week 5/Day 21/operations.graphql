@@ -1,0 +1,120 @@
+# GET USER
+
+
+query GetUser($id: ID!) {
+    user(id: $id) {
+        id
+        username
+        email
+    }
+}
+
+# GET USERS
+
+query GetUsers($limit: Int = 10) {
+    users(limit: $limit) {
+        id
+        username
+        email
+    }
+}
+
+# GET PROJECT
+
+query GetProject($id: ID!) {
+    project(id: $id) {
+        id
+        name
+        description
+        owner {
+            id
+            username
+        }
+        tasks(limit: 10) {
+            id
+            title
+            status
+        }
+    }
+}
+
+# GET TASK
+
+query GetTask($id: ID!) {
+    task(id: $id) {
+        id
+        title
+        description
+        status
+        project {
+            id
+            name
+        }
+        assignedTo {
+            id
+            username
+        }
+    }
+}
+
+# CREATE USER
+
+mutation CreateUser($input: CreateUserInput!) {
+    createUser(input: $input) {
+        id
+        username
+        email
+    }
+}
+
+# CREATE PROJECT
+
+mutation CreateProject($input: CreateProjectInput!) {
+    createProject(input: $input) {
+        id
+        name
+        description
+    }
+}
+
+# UPDATE PROJECT
+
+mutation UpdateProject(
+    $id: ID!
+    $input: UpdateProjectInput!
+) {
+    updateProject(id: $id, input: $input) {
+        id
+        name
+        description
+    }
+}
+
+# CREATE TASK
+
+mutation CreateTask($input: CreateTaskInput!) {
+    createTask(input: $input) {
+        id
+        title
+        status
+    }
+}
+
+# UPDATE TASK
+
+mutation UpdateTask(
+    $id: ID!
+    $input: UpdateTaskInput!
+) {
+    updateTask(id: $id, input: $input) {
+        id
+        title
+        status
+    }
+}
+
+# DELETE TASK
+
+mutation DeleteTask($id: ID!) {
+    deleteTask(id: $id)
+}
